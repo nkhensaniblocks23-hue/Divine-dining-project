@@ -9,7 +9,6 @@ Welcome to **Divine Dining**, a beautifully crafted responsive website designed 
 
 The purpose of the Divine Dining website is to provide potential customers with a seamless experience when exploring menu options, upcoming events, and contact information. The clean and elegant design ensures that all critical information is presented in an easy-to-navigate format, enhancing the overall user experience.
 
----
 
 ## Features
 
@@ -27,13 +26,10 @@ The purpose of the Divine Dining website is to provide potential customers with 
 
 - **Typography and Decoration**: Enhanced with sophisticated CSS styles for typography, including various heading sizes and decorative elements that improve the overall aesthetic appeal.
 
----
-
 ## File & Folder Structure
 
 This project follows a structured file organization to ensure ease of access and management. Below is the hierarchy of the folders and files within the **Divine Dining** repository:
 
-```
 DivineDining/
 ├── Pages/
 │   ├── menu.html              # Menu page
@@ -46,11 +42,9 @@ DivineDining/
     ├── images                 # Folder for images used in the site
     └── Icons                  # Folder for icon images
 └── index.html                 # Home page (entry point)
-```
 
----
 
-## Installation / How to Run
+ Installation / How to Run
 
 To set up and run this website locally, please follow these instructions:
 
@@ -67,7 +61,6 @@ To set up and run this website locally, please follow these instructions:
 3. **Static Website**:
    - No server setup is required as this is a static website. All files can be viewed offline once downloaded.
 
----
 
 ## Dependencies
 
@@ -76,8 +69,6 @@ To set up and run this website locally, please follow these instructions:
 
 - **Google Fonts**: 
   - Incorporated to enhance the overall typography style. Ensure to add the necessary link to Google Fonts in your HTML to apply the desired font family.
-
----
 
 ## Usage Instructions
 
@@ -92,18 +83,10 @@ To set up and run this website locally, please follow these instructions:
   - **Menu Items**: Customize how dishes are displayed, including hover effects and image sizes.
   - **Buttons**: Update button styles for interactivity, including hover effects that enhance user engagement.
 
-### Adding New Pages
-
-- If you wish to expand the site, you can create additional pages with relevant content. Ensure to link new pages through the navigation bar by updating the `nav` section in the HTML files.
-
----
-
 ## Author
 
 **Your Name (Nkhensani)**  
 Passionate web developer dedicated to creating user-friendly, visually appealing websites. With a focus on best practices, my aim is to ensure that every project delivered offers an engaging experience to users while remaining easy to maintain and update.
-
----
 
 ## Changelog
 
@@ -126,11 +109,16 @@ Passionate web developer dedicated to creating user-friendly, visually appealing
 - Planned improvements include enhancements to accessibility features and performance optimizations.
 - Consider adding animations and transitions for a more dynamic interaction.
 
----
-
 ## License
 
 This project is open-source and available for use and modification as desired. Users are encouraged to contribute and improve the site. Attribution is appreciated when using elements from this project. Ensure compliance with the licenses of any assets, frameworks, or libraries utilized.
 
----
 reference 
+W3Schools. (2025, September 6). W3Schools. Retrieved from W3Schools: https://www.w3schools.com/cssref/pr_class_cursor.php
+
+Mozilla Developer Network (2023) CSS: Cascading Style Sheets. Retrieved from mozilla: https://developer.mozilla.org/en-US/docs/Web/CSS
+
+Bootstrap (2023) Bootstrap Documentation. Retrieved from bootstrap: https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+Lie, H. (2020) CSS Secrets: Better Solutions to Everyday Web Design Problems. 1st edn. O'Reilly Media. Retrieved from CSS Secrets: https://www.oreilly.com/library/view/css-secrets/9781449374364/
+
