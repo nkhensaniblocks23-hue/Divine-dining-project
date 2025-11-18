@@ -1,13 +1,13 @@
-[10:39, 27/08/2025] Nkhensani: <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Events | Divine Dining</title>
-    <link rel="stylesheet" href="../css/style.css">  
+    <title>Enquiry | Divine Dining</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <!-- Header with Horizontal Navigation -->
     <header>
         <nav>
             <ul>
@@ -21,60 +21,67 @@
         </nav>
     </header>
 
-    <!-- Enquiry Section -->
     <section class="enquiry">
         <h1>Enquiry Form</h1>
-        <form class="enquiry-form">
+        <form id="enquiry-form">
             <div class="form-group">
                 <label for="name">Full Name</label>
                 <input type="text" id="name" name="name" required placeholder="Your full name">
             </div>
-            
             <div class="form-group">
                 <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" required placeholder="Your email address">
             </div>
-            
             <div class="form-group">
                 <label for="phone">Phone Number</label>
                 <input type="tel" id="phone" name="phone" placeholder="Your phone number (optional)">
             </div>
-            
             <div class="form-group">
                 <label for="subject">Subject</label>
                 <input type="text" id="subject" name="subject" required placeholder="Subject of your enquiry">
             </div>
-            
             <div class="form-group">
                 <label for="message">Your Message</label>
                 <textarea id="message" name="message" required placeholder="Please provide details of your enquiry"></textarea>
             </div>
-            
             <button type="submit">Submit Enquiry</button>
         </form>
-        
+
         <div class="contact-info">
             <div class="info-card">
                 <i>📞</i>
                 <h3>Call Us</h3>
                 <p>+27 12 345 6789</p>
             </div>
-            <div class="info-card">
-                <i>✉️</i>
-                <h3>Email Us</h3>
-                <p>info@divinedining.co.za</p>
-            </div>
-            <div class="info-card">
-                <i>🕒</i>
-                <h3>Opening Hours</h3>
-                <p>Mon-Sun: 10am-10pm</p>
-            </div>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2023 Divine Dining. All rights reserved.</p>
-        <p>Crafted with passion in South Africa</p>
     </footer>
+
+    <script>
+        $('#enquiry-form').on('submit', function(event) {
+            let formValid = true;
+            const name = $('#name').val();
+            const email = $('#email').val();
+
+            if (name === '') {
+                alert('Name is required.');
+                formValid = false;
+            }
+            if (email === '') {
+                alert('Email is required.');
+                formValid = false;
+            }
+
+            if (!formValid) {
+                event.preventDefault();
+            } else {
+                alert("Thank you for your enquiry, we will get back to you shortly!");
+                // Implement form submission via AJAX or preferred method here
+            }
+        });
+    </script>
 </body>
 </html>

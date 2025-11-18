@@ -6,8 +6,7 @@
     <title>Menu | Divine Dining</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
-<body
-    <!-- Header with Horizontal Navigation -->
+<body>
     <header>
         <nav>
             <ul>
@@ -21,96 +20,36 @@
         </nav>
     </header>
 
-    <!-- Menu Section -->
     <section class="menu">
         <h1>Our Exquisite Menu</h1>
-        
+        <input type="text" id="search" placeholder="Search Menu" onkeyup="searchMenu()">
+
         <div class="menu-grid">
-            <!-- Starter Section -->
-            <div class="menu-item">
+            <!-- Example Menu Item -->
+            <div class="menu-item" id="starters">
                 <img src="../assets/Starters Main-Menu.jpg" alt="Starters">
                 <div class="menu-item-content">
                     <h3>Starters</h3>
                     <p>Begin your culinary journey with our exquisite selection of appetizers and small plates.</p>
                 </div>
             </div>
-            
-            <!-- Burgers Section -->
-            <div class="menu-item">
-                <img src="../assets/Burger-Menu.jpg" alt="Burgers">
-                <div class="menu-item-content">
-                    <h3>Gourmet Burgers</h3>
-                    <p>Juicy, flavorful burgers made with premium ingredients and served with our signature sauces.</p>
-                </div>
-            </div>
-            
-            <!-- Baskets Section -->
-            <div class="menu-item">
-                <img src="../assets/BasketMain-Menu.jpg" alt="Baskets">
-                <div class="menu-item-content">
-                    <h3>Shareable Baskets</h3>
-                    <p>Perfect for groups, our baskets are filled with delicious finger foods and dipping sauces.</p>
-                </div>
-            </div>
-            
-            <!-- Chicken Section -->
-            <div class="menu-item">
-                <img src="../assets/Chicken Main-Menu.jpg" alt="Chicken Dishes">
-                <div class="menu-item-content">
-                    <h3>Chicken Specialties</h3>
-                    <p>From crispy fried to perfectly grilled, our chicken dishes satisfy every craving.</p>
-                </div>
-            </div>
-            
-            <!-- Nachos Section -->
-            <div class="menu-item">
-                <img src="../assets/Nachos.jpg" alt="Nachos">
-                <div class="menu-item-content">
-                    <h3>Loaded Nachos</h3>
-                    <p>Crispy tortilla chips topped with melted cheese, fresh toppings, and your choice of protein.</p>
-                </div>
-            </div>
-            
-            <!-- Pasta Section -->
-            <div class="menu-item">
-                <img src="../assets/Pasta Main-Menu.jpg" alt="Pasta">
-                <div class="menu-item-content">
-                    <h3>Pasta Selection</h3>
-                    <p>Handcrafted pasta dishes with rich sauces and fresh ingredients.</p>
-                </div>
-            </div>
-            
-            <!-- Pizza Section -->
-            <div class="menu-item">
-                <img src="../assets/Pizza menu.jpg" alt="Pizza">
-                <div class="menu-item-content">
-                    <h3>Artisan Pizzas</h3>
-                    <p>Wood-fired pizzas with hand-tossed dough and premium toppings.</p>
-                </div>
-            </div>
-            
-            <!-- Salads Section -->
-            <div class="menu-item">
-                <img src="../assets/Salads Menu.jpg" alt="Salads">
-                <div class="menu-item-content">
-                    <h3>Fresh Salads</h3>
-                    <p>Light and refreshing salads made with seasonal produce and house-made dressings.</p>
-                </div>
-            </div>
-            
-            <!-- Desserts Section -->
-            <div class="menu-item">
-                <img src="../assets/desert.jpg" alt="Desserts">
-                <div class="menu-item-content">
-                    <h3>Decadent Desserts</h3>
-                    <p>Sweet endings to your meal with our selection of cakes, pastries, and more.</p>
-                </div>
-            </div>
+            <!-- Add other menu items similarly -->
         </div>
     </section>
 
     <footer>
         <p>&copy; 2023 Divine Dining. All rights reserved.</p>
     </footer>
+
+    <script>
+        function searchMenu() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const menuItemsGrid = document.querySelectorAll('.menu-item');
+            menuItemsGrid.forEach(item => {
+                const title = item.querySelector('h3').innerText.toLowerCase();
+                item.style.display = title.includes(input) ? '' : 'none';
+            });
+        }
+    </script>
 </body>
 </html>
