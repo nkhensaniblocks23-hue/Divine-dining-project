@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Menu | Divine Dining</title>
+    <meta name="description" content="Explore our exquisite menu featuring a variety of dishes.">
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -22,34 +23,57 @@
 
     <section class="menu">
         <h1>Our Exquisite Menu</h1>
-        <input type="text" id="search" placeholder="Search Menu" onkeyup="searchMenu()">
-
         <div class="menu-grid">
-            <!-- Example Menu Item -->
-            <div class="menu-item" id="starters">
-                <img src="../assets/Starters Main-Menu.jpg" alt="Starters">
-                <div class="menu-item-content">
-                    <h3>Starters</h3>
-                    <p>Begin your culinary journey with our exquisite selection of appetizers and small plates.</p>
-                </div>
+            <div class="menu-item">
+                <img src="../assets/BasketMain-Menu.jpg" alt="Dish 1" onclick="openLightbox(this.src)">
+                <h3>Sample Dish 1</h3>
             </div>
-            <!-- Add other menu items similarly -->
+            <div class="menu-item">
+                <img src="../assets/Burger-Menu.jpg" alt="Dish 2" onclick="openLightbox(this.src)">
+                <h3>Sample Dish 2</h3>
+            </div>
+            <div class="menu-item">
+                <img src="../assets/Chicken Main-Menu.jpg"alt="Dish 3" onclick="openLightbox(this.src)">
+                 <h3>Sample Dish 3</h3>
+            </div>
+                <div class="menu-item">
+                <img src="../assets/Chicken Main-Menu.jpg"alt="Dish 4" onclick="openLightbox(this.src)">
+                <h3>Sample Dish 4</h3>
+             </div>
+            <div class="menu-item">
+                <img src="../assets/Pasta Main-Menu.jpg"alt="Dish 5" onclick="openLightbox(this.src)">
+                <h3>Sample Dish 5</h3>
         </div>
+            <div class="menu-item">
+                <img src="../assets/Salads Menu.jpg"alt="Dish 6" onclick="openLightbox(this.src)">
+                <h3>Sample Dish 6</h3>
+        </div>
+            <div class="menu-item">
+                <img src="../assets/wraps Main-Menu.jpg"alt="Dish 7" onclick="openLightbox(this.src)">
+                <h3>Sample Dish 7</h3>
+        </div>
+            <div class="menu-item">
+                <img src="../assets/Starters Main-Menu.jpg"alt="Dish 8" onclick="openLightbox(this.src)">
+                <h3>Sample Dish 8</h3>
+        </div>
+
+
     </section>
 
+    <div id="lightbox" class="lightbox" onclick="this.style.display='none'">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="img01">
+    </div>
+
+    <script>
+        function openLightbox(src) {
+            document.getElementById('img01').src = src;
+            document.getElementById('lightbox').style.display = "block";
+        }
+    </script>
+    
     <footer>
         <p>&copy; 2023 Divine Dining. All rights reserved.</p>
     </footer>
-
-    <script>
-        function searchMenu() {
-            const input = document.getElementById('search').value.toLowerCase();
-            const menuItemsGrid = document.querySelectorAll('.menu-item');
-            menuItemsGrid.forEach(item => {
-                const title = item.querySelector('h3').innerText.toLowerCase();
-                item.style.display = title.includes(input) ? '' : 'none';
-            });
-        }
-    </script>
 </body>
 </html>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events | Divine Dining</title>
+    <meta name="description" content="Discover the upcoming events at Divine Dining. Join us for exclusive dining experiences.">
     <link rel="stylesheet" href="../css/style.css">
-    <meta name="description" content="Join us for upcoming events at Divine Dining, where exceptional dining meets unforgettable experiences.">
 </head>
 <body>
     <header>
@@ -23,64 +23,40 @@
 
     <section class="events">
         <h1>Upcoming Events</h1>
-        <p class="events-intro">Join us for unforgettable dining experiences at Divine Dining. From seasonal celebrations to special occasions, we host events that delight all senses.</p>
+        <div id="event-list"></div>
 
-        <div class="events-grid">
-            <div class="event-card">
-                <div class="event-image">
-                    <img src="../assets/event1.jpeg" alt="Mother's Day Celebration">
-                </div>
-                <div class="event-details">
-                    <span class="event-date">May 12, 2024</span>
-                    <h3>Mother's Day Brunch</h3>
-                    <p class="event-description">Celebrate the special women in your life with our exquisite Mother's Day brunch buffet featuring seasonal specialties and live music.</p>
-                    <a href="enquiry.html" class="event-button">Reserve Table</a>
-                </div>
-            </div>
-            <div class="event-card">
-                <div class="event-image">
-                    <img src="../assets/event2.jpeg" alt="Father's Day Grill">
-                </div>
-                <div class="event-details">
-                    <span class="event-date">June 16, 2024</span>
-                    <h3>Father's Day Grill Masterclass</h3>
-                    <p class="event-description">Our executive chef will demonstrate grilling techniques while you enjoy premium cuts paired with craft beers and fine wines.</p>
-                    <a href="enquiry.html" class="event-button">Learn More</a>
-                </div>
-            </div>
-            <div class="event-card">
-                <div class="event-image">
-                    <img src="../assets/event3.jpeg" alt="Monday Special">
-                </div>
-                <div class="event-details">
-                    <span class="event-date">Every Monday</span>
-                    <h3>Wine & Dine Mondays</h3>
-                    <p class="event-description">Enjoy 20% off all wine bottles and special prix-fixe menu every Monday evening in our elegant dining room.</p>
-                    <a href="menu.html" class="event-button">View Menu</a>
-                </div>
-            </div>
-        </div>
+        <script>
+            const events = [
+                {
+                    date: 'May 12, 2024',
+                    title: 'Mother\'s Day Brunch',
+                    description: 'Celebrate the special women in your life with our exquisite Mother\'s Day brunch buffet featuring seasonal specialties and live music.'
+                },
+                {
+                    date: 'June 16, 2024',
+                    title: 'Father\'s Day Grill Masterclass',
+                    description: 'Join us for an exclusive grilling class with our Head Chef.'
+                },
+                {
+                    date: 'Every Monday',
+                    title: 'Wine & Dine Mondays',
+                    description: 'Enjoy 20% off all wine bottles.'
+                }
+            ];
 
-        <!-- Regular Events -->
-        <div class="regular-events">
-            <h2>Regular Events</h2>
-            <ul>
-                <li>
-                    <span class="event-day">Every Monday</span>
-                    <span class="event-special">Wine & Dine Special (20% off all wines)</span>
-                </li>
-                <li>
-                    <span class="event-day">Every Tuesday</span>
-                    <span class="event-special">Tapas Night (Half-price small plates)</span>
-                </li>
-                <li>
-                    <span class="event-day">Every Thursday</span>
-                    <span class="event-special">Live Jazz & Dinner (7pm-10pm)</span>
-                </li>
-            </ul>
-        </div>
+            const eventList = document.getElementById('event-list');
+            events.forEach(event => {
+                const eventDiv = document.createElement('div');
+                eventDiv.classList.add('event-card');
+                eventDiv.innerHTML = `
+                    <h3>${event.title}</h3>
+                    <p><strong>Date:</strong> ${event.date}</p>
+                    <p>${event.description}</p>
+                `;
+                eventList.appendChild(eventDiv);
+            });
+        </script>
     </section>
-
     <footer>
         <p>&copy; 2023 Divine Dining. All rights reserved.</p>
     </footer>
